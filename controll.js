@@ -16,18 +16,21 @@ let lastGuesses = 'The previous guesses are : ';
 function work_done() {
    
     let value = Number(textField.value);
-    lastGuesses += value + " ";
+    lastGuesses += value + "  ";
     previous_guesses.textContent = lastGuesses;
     if(value == randomNumber) {
         results.textContent = 'You won the game !!';
+        results.style.backgroundColor = 'green';
         textField.value = "";
     }
     if(value > randomNumber) {
         results.textContent = 'Value is larger than guessing number';
+        results.style.backgroundColor = 'red';
         textField.value = "";
     }
     if(value < randomNumber) {
         results.textContent = 'Value is smaller than guessing number';
+        results.style.backgroundColor = 'red';
         textField.value = "";
     }
     guesses++;
