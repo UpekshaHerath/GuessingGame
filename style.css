@@ -2,27 +2,41 @@
     padding: 0;
     margin: 0;
     line-height: 2;
+    background-color: aquamarine;
 }
 
 .game_area {
     background-color: aquamarine;
     padding: 20%;
     padding-top: 5%;
-    margin-bottom: 0;
+    margin-bottom:auto;
 }
 .heading {
     text-align: center;
 }
 .submit {
-    background-color: blueviolet;
+    background-color:blueviolet;
     border-radius: 20px;
     text-align: center;
     color: white;
     padding: 5px;
+    margin-left: 20px;
 }
 .inputField {
     border-radius: 10px;
     text-align: center;
-    margin: none;
+    margin: 0;
     border: none;
+    background-color: white;
 }
+.newGame {
+    background-color:rgb(43, 184, 43);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+
+

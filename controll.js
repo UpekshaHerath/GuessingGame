@@ -14,10 +14,11 @@ submit.onclick = function() {
 let guesses = 0;
 let lastGuesses = 'The previous guesses are : ';
 function work_done() {
-   
+
     let value = Number(textField.value);
     lastGuesses += value + "  ";
     previous_guesses.textContent = lastGuesses;
+    
     if(value == randomNumber) {
         results.textContent = 'You won the game !!';
         results.style.backgroundColor = 'green';
@@ -25,20 +26,23 @@ function work_done() {
     }
     if(value > randomNumber) {
         results.textContent = 'Value is larger than guessing number';
-        results.style.backgroundColor = 'red';
+        results.style.backgroundColor = 'firebrick';
         textField.value = "";
     }
     if(value < randomNumber) {
         results.textContent = 'Value is smaller than guessing number';
-        results.style.backgroundColor = 'red';
+        results.style.backgroundColor = 'firebrick';
         textField.value = "";
     }
     guesses++;
     if(guesses == 5){
         results.textContent = 'Your number of guesses are over. Start a new game';
+        results.style.backgroundColor = 'red';
+        let r = confirm("Start a new Game !!");
+        location.reload();
     }
-        
-        
-   
-    
+}
+
+function resetTheGame() {
+    alert('Start a new game !!');
 }
