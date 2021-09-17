@@ -18,6 +18,7 @@ function work_done() {
     let value = Number(textField.value);
     lastGuesses += value + "  ";
     previous_guesses.textContent = lastGuesses;
+
     if(isNaN(value) || value > 100 || value <= 0 || isFloat(value)) {
         alert('Invalid input !!');
         resetTheGame();
